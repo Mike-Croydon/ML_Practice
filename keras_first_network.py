@@ -29,3 +29,9 @@ model.fit(X, y, epochs=150, batch_size=10)
 # evaluate the keras model
 _, accuracy = model.evaluate(X, y)
 print('Accuracy: %.2f' % (accuracy*100))
+
+#make some predictions with the model
+predictions = model.predict_classes(X)
+# summarize the first 5 cases
+for i in range(5):
+	print('%s => %d (expected %d)' % (X[i].tolist(), predictions[i], y[i]))
