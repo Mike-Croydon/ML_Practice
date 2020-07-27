@@ -14,8 +14,8 @@ model = Sequential()
 #add layers to our model using the Dense class. The first layer uses input_dim to specify 8 input arguments
 #first two layers use ReLU activation function, final layer uses sigmorid activation function
 #Number of nodes (12,8,1) is first argument of Class constructor
-model.add(Dense(12, input_dim=8, activation='relu'))
-model.add(Dense(8, activation='relu'))
+model.add(Dense(16, input_dim=8, activation='relu'))
+model.add(Dense(16, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
 # compile the keras model
@@ -24,7 +24,7 @@ model.add(Dense(1, activation='sigmoid'))
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 # fit the keras model on the dataset
-model.fit(X, y, epochs=150, batch_size=10)
+model.fit(X, y, epochs=500, batch_size=10)
 
 # evaluate the keras model
 _, accuracy = model.evaluate(X, y)
