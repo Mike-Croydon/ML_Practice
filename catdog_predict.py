@@ -20,7 +20,7 @@ def load_image(filename):
 # load an image and predict the class
 def run_example():
 	# load the image
-	img = load_image('sample_image.jpg')
+	img = load_image('test1/483.jpg')
 	# load model
 	model = load_model('final_model.h5')
 	# predict the class
